@@ -1,0 +1,153 @@
+body {
+}
+
+/* Fix Toolbar for .navbar-fixed-top */
+body.toolbar .navbar-fixed-top {
+ top: 30px;
+}
+
+body.toolbar-drawer .navbar-fixed-top {
+ top: 65px;
+}
+
+@media(min-width: 980px) {
+  body.toolbar { padding-top: 30px !important; }
+  body.toolbar-drawer { padding-top: 65px !important; }
+  body {padding-top: 72px;}
+}
+
+html.overlay-open .navbar-fixed-top {
+  z-index: 400;
+}
+
+/* Admin toolbar fix */
+body.admin-expanded.admin-vertical.admin-nw .navbar,
+body.admin-expanded.admin-vertical.admin-sw .navbar {
+  margin-left: 260px;
+}
+
+div#admin-toolbar {
+  z-index: 500;
+}
+
+.submitted {
+  font-style: italic;
+  font-weight: normal;
+  width: 100%;
+  text-align: right;
+  display: block;
+}
+
+/* System base fix */
+.container-inline div, .container-inline label {
+  display: block;
+}
+
+/* Default form fields to auto */
+input, textarea, select, .uneditable-input {
+  width:auto;
+}
+
+/* throbber fix */
+html.js input.form-autocomplete {
+  background-position: 100% 7px; /* LTR */
+  background-repeat: no-repeat;
+}
+html.js input.throbbing {
+  background-position: 100% -13px; /* LTR */
+}
+
+.navbar-search .control-group {
+  margin-bottom:0px;
+}
+
+input.error {
+  color: #B94A48;
+  border-color: #B94A48;
+}
+
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #E5E5E5;
+}
+
+footer {
+  clear: both;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+
+
+/* Frontpage Hacks */
+/* make h2 title look like h1 */
+/*
+.front h2.node-title {
+  border: none;
+  text-align: left;
+  font-size: 48px;
+  line-height: 48px;
+  padding-bottom: 2px;
+  margin-bottom: 0;
+}
+.front h2.node-title:before {
+  content: none;
+}
+.front h2.node-title:after {
+  content: none;
+}
+*/
+
+/* Content Hacks */
+.field-name-field-blog-hero {
+  float: left;
+  padding: 1px;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.node-teaser .field-name-field-blog-images .field-item {
+  float: left;
+  /* width: 280px; */
+  /* height: 280px; */
+}
+.field-name-field-blog-images .field-item {
+  text-align: center;
+}
+.node-teaser .field-name-field-blog-images .field-item img {
+  margin: 15px;
+}
+.field-name-field-blog-images .field-item img {
+  padding: 1px;
+}
+
+
+/* Small screen fixes */
+@media (max-width: 480px) {
+  .front h1, .front h2, .front h2.node-title,
+  h1, h2, h2.node-title {
+    text-align: center;
+  }
+  /* Kill h2 effects on small screen */
+  h2:before {
+    content: none;
+  }
+  h2:after {
+    content: none;
+  }
+  
+  /* remove spacing between images */
+  .node-teaser .field-name-field-blog-images .field-item img {
+    margin: 5px 0;
+  }
+  .node-teaser .field-name-field-blog-images .field-item {
+    height: auto;
+  }
+}
+
+#comment-form-wrapper.well {
+  margin-top: 20px;
+}
+
+
